@@ -1,6 +1,9 @@
 local M = {}
-
-function FindAndSelectPattern()
+function M.setup(opts)
+	-- Optional: Handle options here if needed in the future
+	opts = opts or {}
+end
+function M.FindAndSelectPattern()
 	-- does not work perfectly, but it's a start
 	local patterns = {
 		url_https = "(https?://[%w%.%-/:#%?%&_=]+)",
