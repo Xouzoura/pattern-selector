@@ -43,6 +43,7 @@ Patterns Supported
 
 <h1>Contributing</h1>
 Feel free to fork and submit a pull request to add more patterns or suggest improvements. For bugs, create an issue in the GitHub repository.
+
 License
 
 This plugin is open-source and available under the MIT License.
