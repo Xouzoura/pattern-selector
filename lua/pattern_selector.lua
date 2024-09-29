@@ -65,7 +65,7 @@ function M.FindAndSelectPattern()
 			if hint.char == char then
 				vim.fn.setreg("+", hint.match)
 				vim.api.nvim_buf_clear_namespace(bufnr, ns_id, 0, -1)
-				print("Copied ", hint.match)
+				vim.notify("Copied " .. hint.match, vim.log.levels.INFO, { timeout = 2000 })
 				return
 			end
 		end
@@ -104,7 +104,11 @@ function M.ReplaceWithClipboard()
 					{ clipboard_content }
 				)
 				vim.api.nvim_buf_clear_namespace(bufnr, ns_id, 0, -1)
-				print("Replaced ", hint.match, " with clipboard content: ", clipboard_content)
+				vim.notify(
+					"Replaced " .. hint.match .. " with clipboard content: " .. clipboard_content,
+					vim.log.levels.INFO,
+					{ timeout = 2000 }
+				)
 				return
 			end
 		end
