@@ -1,5 +1,9 @@
 local M = {}
 
+function M.setup(opts)
+	-- Optional: Handle options here if needed in the future
+	opts = opts or {}
+end
 -- Common patterns to search for
 local patterns = {
 	url_https = "(https?://[%w%.%-/:#%?%&_=]+)",
