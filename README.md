@@ -1,12 +1,17 @@
 Pattern Selector for Neovim to easy copy/paste/replace patterns.
 <h1>Overview</h1>
 
-Pattern Selector is a Neovim plugin designed to highlight and select patterns like URLs, UUIDs, IP addresses, and tokens for easy and simple copy. (idea from [thumbs-nvim](https://github.com/fcsonline/tmux-thumbs)), but will also replace the selected pattern with a new value. 
+Pattern Selector is a Neovim plugin designed to highlight and select patterns (like URLs, UUIDs, IP addresses, and tokens) for easy and simple copy. (idea from [thumbs-nvim](https://github.com/fcsonline/tmux-thumbs)), but will also replace the selected pattern with a new value. 
 
-Example for copy:
+Use the `FindAndSelectPattern()` function which will highlight and assign a unique character to each match for quick selection. 
+
+The `ReplaceWithClipboard()` function will replace what the selected item contains with the clipboard value.
+
+Examples:
+
 [Example for copy](https://giphy.com/gifs/BmwxVjTUqTfu9dZgJA)
-Example for replace:
-[example2](https://giphy.com/gifs/Mfen6kZ4NXtIKks28Z)
+
+[example for replace](https://giphy.com/gifs/Mfen6kZ4NXtIKks28Z)
 
 <h2>Features:</h2>
 
