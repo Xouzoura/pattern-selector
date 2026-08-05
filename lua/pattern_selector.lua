@@ -60,7 +60,11 @@ local function find_patterns_in_buffer()
 
 		for _, pattern_name in ipairs(pattern_order) do
 			local pattern = patterns[pattern_name]
-			for start_pos, match in line:gmatch("()(" .. pattern .. ")") do
+			for start_pos, whole_match, inner in line:gmatch("()(" .. pattern .. ")") do
+                local match = whole_match
+                if pattern_name == "backtick_quoted" and inner then
+                    match = inner
+                end
 				local end_pos = start_pos + #match - 1
 
 				if pattern_name == "hex_hash" and #match < MIN_HEX_HASH_LEN then
